@@ -1,0 +1,21 @@
+id,name,brewery_type,street,city,state,postal_code,country,longitude,latitude,phone,website_url,updated_at
+2,Avondale Brewing Co,micro,201 41st St S,Birmingham,Alabama,35222-1932,United States,-86.774322,33.524521,2057775456,http://www.avondalebrewing.com,2018-08-23T23:19:57.825Z
+4,Band of Brothers Brewing Company,micro,1605 23rd Ave,Tuscaloosa,Alabama,35401-4653,United States,-87.5621551272424,33.1984907123707,2052665137,http://www.bandofbrosbrewing.com,2018-08-23T23:19:59.462Z
+44,Trim Tab Brewing,micro,2721 5th Ave S,Birmingham,Alabama,35233-3401,United States,-86.7914000624146,33.5128492349817,2057030536,http://www.trimtabbrewing.com,2018-08-23T23:20:31.423Z
+46,Yellowhammer Brewery,micro,2600 Clinton Ave W,Huntsville,Alabama,35805-3046,United States,-86.5932014,34.7277523,2569755950,http://www.yellowhammerbrewery.com,2018-08-23T23:20:33.102Z
+55,Bearpaw River Brewing Co,micro,4605 E Palmer Wasilla Hwy,Wasilla,Alaska,99654-7679,United States,-149.4127103,61.5752695,,http://bearpawriverbrewing.com,2018-08-23T23:20:40.743Z
+76,King Street Brewing Co,micro,9050 King Street,Anchorage,Alaska,99515,United States,-149.879076042937,61.1384893547315,9073365464,http://www.kingstreetbrewing.com,2018-08-23T23:20:57.179Z
+94,1912 Brewing,micro,2045 N Forbes Blvd Ste 105,Tucson,Arizona,85745-1444,United States,-110.992750525872,32.2467372722906,5202564851,http://www.1912brewing.com,2018-08-23T23:21:11.302Z
+98,Bad Water Brewing,contract,4216 N Brown Ave,Scottsdale,Arizona,85251-3914,United States,-111.924474347826,33.4972615652174,5207459175,http://www.badwaterbrewing.com,2018-08-23T23:21:15.169Z
+104,BJs Restaurant & Brewery - Chandler,brewpub,3155 W Chandler Blvd,Chandler,Arizona,85226-5175,United States,-111.911126,33.3053455,4809170631,http://www.bjsrestaurants.com,2018-08-23T23:21:21.165Z
+107,BlackRock Brewers,micro,1664 S Research Loop Ste 200,Tucson,Arizona,85710-6767,United States,-110.821778571134,32.201608314954,5202073203,http://www.brb.beer,2018-08-23T23:21:23.794Z
+127,Dragoon Brewing Co,micro,1859 W Grant Rd Ste 111,Tucson,Arizona,85745-1214,United States,-111.005452051979,32.2504946147872,5203293606,http://www.dragoonbrewing.com,2018-08-23T23:21:40.563Z
+141,Grand Canyon Brewing Company,micro,233 W Route 66,Williams,Arizona,86046-2530,United States,-112.1892168,35.2500282,8005132072,http://www.grandcanyonbrewingco.com,2018-08-23T23:21:53.397Z
+163,Mudshark Brewing Co,micro,210 Swanson Ave,Lake Havasu City,Arizona,86403-0966,United States,-114.342433477881,34.4689736300844,9284532981,http://www.mudsharkbrewingco.com,2018-08-23T23:22:12.542Z
+182,Richter Aleworks,micro,8279 W Lake Pleasant Pkwy Ste 110,Peoria,Arizona,85382-7434,United States,-112.238054093359,33.6687744976834,6029086553,http://www.richteraleworks.com,2018-08-23T23:22:29.385Z
+187,SanTan Brewing Co,regional,8 S San Marcos Pl,Chandler,Arizona,85225-7862,United States,-111.8423459,33.3032436,4809178700,http://www.santanbrewing.com,2018-08-23T23:22:33.482Z
+198,State 48 Brewery,brewpub,13823 W Bell Rd,Surprise,Arizona,85374-3873,United States,-112.357813820157,33.63822125,6235841095,,2018-08-23T23:22:41.468Z
+219,Wren House Brewing Company,micro,2125 N 24th St,Phoenix,Arizona,85008-2713,United States,-112.0301125,33.516633,6022449184,http://www.wrenhousebrewing.com,2018-08-23T23:22:59.255Z
+225,Brick Oven Pizza Co / Brick & Forge Brewing,brewpub,2410 Linwood Dr,Paragould,Arkansas,72450-6122,United States,-90.5204797204622,36.0316358142169,8702364200,http://www.brickovenpizzacompany.com,2018-08-23T23:23:05.438Z
+235,Diamond Bear Brewing Co,micro,600 N Broadway St,North Little Rock,Arkansas,72114-5381,United States,-92.2726892120821,34.7594277548278,5017082739,http://www.diamondbear.com,2018-08-23T23:23:14.931Z
+247,Lost Forty Brewing,micro,501 Byrd St,Little Rock,Arkansas,72202,United States,-92.260019,34.742845,5013197275,http://www.lost40brewing.com/,2018-08-23T23:23:24.018Z

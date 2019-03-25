@@ -3,7 +3,7 @@ import plotly.graph_objs as go
 from plotly.utils import PlotlyJSONEncoder
 import json
 import requests
-import  requests_cache
+import requests_cache
 
 app = Flask(__name__)
 

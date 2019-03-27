@@ -1,11 +1,30 @@
 from flask import Flask, render_template, request, jsonify
-import plotly.graph_objs as go
-from plotly.utils import PlotlyJSONEncoder
 import json
 import requests
-import requests_cache
+from pprint import pprint
+from functools import wraps
+from flask import  Response
+
+def check_auth(username, password):
+    return username == 'cammyoung' and password == '30101993'
+
+def authenticate():
+    return Response(
+    'Could not verify your access level for that URL.\n'
+    'You have to login with proper credentials', 401,
+    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
 
 app = Flask(__name__)
+
 
 brewery_url = 'https://api.openbrewerydb.org/breweries'
 by_name = 'https://api.openbrewerydb.org/breweries?by_name={variableName}'
@@ -13,6 +32,7 @@ by_city = 'https://api.openbrewerydb.org/breweries?by_city={variableName}'
 by_state = 'https://api.openbrewerydb.org/breweries?by_state={variableName}'
 
 @app.route('/')
+@requires_auth
 def home():
     return "<h1> Welcome to Brewery API' </h1>"
 
@@ -86,4 +106,4 @@ def brewery_state(brewery_state):
 
 
 if __name__=="__main__":
-    app.run(port=5070, debug=True)
+    app.run(port=8081, debug=True)

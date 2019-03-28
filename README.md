@@ -11,8 +11,8 @@ You can use the images already pre-defined in the kubernetes manifest files or y
 Replace the realbtotharye with your Dockerhub repository
 
 ```
-docker build -t gcr.io/${PROJECT_ID}/hello-app:v1 .
-docker push gcr.io/${PROJECT_ID}/hello-app:v1
+docker build -t gcr.io/${PROJECT_ID}/data-app:v1 .
+docker push gcr.io/${PROJECT_ID}/data-app:v1
 
 docker build -t realbtotharye/flask-kubernetes-redis flask-redis/
 docker push realbtotharye/flask-kubernetes-redis
@@ -53,12 +53,12 @@ docker ps
 
 ## Get Dataset from Github
 ```
-wget -O Brewery_Table.csv http://tinyurl.com/y2bfobc6
+wget -O data.csv 
 ```
 
 ## Copy data into container directory
 ```
-docker cp Brewery_Table.csv cassandra-test:/home/Brewery_Table.csv
+docker cp data.csv cassandra-test:/home/data.csv
 ```
 
 ## Activate CQL shell in GCP
@@ -68,22 +68,22 @@ docker exec -it cassandra-test cqlsh
 
 ## Create Keyspace Brewery
 ```
-CREATE KEYSPACE brewery WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+CREATE KEYSPACE data WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
 ```
 
 ## Create table Breweries
 ```
-CREATE TABLE brewery.breweries (Brewery text, BreweryID text PRIMARY KEY, State text, Type text);
+CREATE TABLE data.stats(City text, Company_name text PRIMARY KEY, State text, Phone text, Website_URL text);
 ```
 
 ## Copy data from csv into Database
 ```
-COPY brewery.breweries(Brewery,BreweryID,State,Type) FROM '/home/Brewery_Table.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+COPY data.stats(City,Company_Name,State,Phone,Website_URL) FROM '/home/data.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
 
 ## Test data
 ```
-select * from brewery.breweries;
+select * from data.stats;
 ```
 
 ## Create 3 node cluster named Cassandra
@@ -122,7 +122,7 @@ kubectl exec -it cassandra-vw6wk  -- nodetool status
 
 ## Copy data from previous part into same container
 ```
-kubectl cp Brewery_Table.csv cassandra-vw6wk:/Brewery_Table.csv
+kubectl cp Brewery_Table.csv cassandra-vw6wk:/data.csv
 ```
 
 ## Run CQL in container
@@ -138,12 +138,15 @@ ALTER KEYSPACE brewery WITH REPLICATION = {'class' : 'SimpleStrategy', 'replicat
 
 #Create table in container#
 ```
-CREATE TABLE brewery.breweries (Brewery text, BreweryID text PRIMARY KEY, State text, Type text);
+CREATE TABLE data.stats
+Company_name text PRIMARY KEY, State text, City text, Phone text, Website_URL); 
 ```
 
 ## Get data from previous section
 ```
-COPY brewery.breweries(Brewery,BreweryID,State,Type) FROM 'Brewery_Table.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+COPY data.stats(Company_Name, City, State, Phone, Wesbite_URL);
+FROM 'data.csv'
+WITH DELIMITER=',' AND HEADER=TRUE;
 ```
 
 ## Clean up

@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments (created locally, not committed)
+venv/
+.venv/
+env/
+
+# OS / editor
+.DS_Store

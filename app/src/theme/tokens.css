@@ -1,0 +1,53 @@
+/* Cheeky Charging — design tokens
+ * Extracted from the current app's branding: hot-pink primary, rounded
+ * pill controls, soft cards. Everything the UI uses references these vars so
+ * a rebrand or dark mode is a one-file change. */
+
+:root {
+  /* Brand pinks */
+  --cc-pink: #f5459e;          /* primary actions */
+  --cc-pink-strong: #e83a93;   /* gradient end / pressed */
+  --cc-pink-mid: #f56fb1;      /* logo/gradient mid */
+  --cc-pink-light: #fbb6d9;    /* logo light / gradient start */
+  --cc-pink-soft: #fde7f2;     /* tinted fills */
+  --cc-pink-border: #f7a8cf;   /* input outlines */
+
+  /* Status */
+  --cc-green: #22b573;
+  --cc-green-bg: #34c759;
+  --cc-red: #e23744;
+  --cc-amber: #f5a623;
+
+  /* Neutrals */
+  --cc-ink: #17161a;           /* primary text */
+  --cc-ink-2: #4a4a52;         /* secondary text */
+  --cc-muted: #8a9099;         /* placeholders / hints */
+  --cc-line: #ececf1;          /* hairlines */
+  --cc-surface: #ffffff;
+  --cc-surface-2: #f6f7f9;     /* grouped background */
+  --cc-bg: #ffffff;
+
+  /* Gradients */
+  --cc-grad-pink: linear-gradient(135deg, var(--cc-pink-mid), var(--cc-pink-strong));
+  --cc-grad-logo: linear-gradient(120deg, var(--cc-pink-light), var(--cc-pink-strong));
+
+  /* Radius */
+  --cc-r-pill: 999px;
+  --cc-r-lg: 22px;
+  --cc-r-md: 16px;
+  --cc-r-sm: 12px;
+
+  /* Elevation */
+  --cc-shadow-sm: 0 2px 8px rgba(23, 22, 26, 0.06);
+  --cc-shadow-md: 0 8px 24px rgba(23, 22, 26, 0.10);
+  --cc-shadow-pink: 0 10px 24px rgba(245, 69, 158, 0.32);
+
+  /* Type */
+  --cc-font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Layout */
+  --cc-maxw: 480px;            /* phone-width canvas, centered on web */
+  --cc-gutter: 20px;
+  --cc-safe-top: env(safe-area-inset-top, 0px);
+  --cc-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
